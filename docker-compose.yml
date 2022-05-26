@@ -1,0 +1,22 @@
+version: '3'
+services:
+  phone-book-client:
+    image: phone-book-client
+    ports:
+      - "3000:3000"
+    networks:
+      - mern-app
+  phone-book-api:
+    image: phone-book-api
+    ports:
+      - "5000:5000"
+    networks:
+      - mern-app
+networks:
+  mern-app:
+    driver: bridge
+ 
+
+
+
+
